@@ -7,7 +7,7 @@ import Home from "../Pages/Home/Home";
 const Redirecciones = () => {
   let rutas = useRoutes([
     { path: "/", element: <Home /> },
-    { path: "/login", element: <Login /> },
+    { path: "/login", element: <Login/> },
   ]);
   return rutas;
 };

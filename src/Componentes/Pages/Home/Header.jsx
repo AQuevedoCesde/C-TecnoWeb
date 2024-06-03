@@ -1,12 +1,16 @@
 import logo from "../../../assets/logodefinitivo.png";
- // import { useNavigate } from "react-router-dom";
-// import "./../csspages/header.css";
+import icono from '../../../assets/user.png'
+import {useContext} from 'react'
+import {InformacionCuenta} from '../../Context/Contex'
+import { useNavigate } from "react-router-dom";
+
 
 function Header() {
-  //let redirigir = useNavigate();
+  const contex = useContext(InformacionCuenta)
+  let redirigir = useNavigate();
 
    function inicioDeSesion() {
-  // redirigir("/login")
+    redirigir("/login")
    }
 
   return (
@@ -18,16 +22,17 @@ function Header() {
         <a href="#" >Home</a>
       </section>
       <div className="flex items-center w-[20%] justify-center">
-        <button  onClick={inicioDeSesion}>
-          inicio de sesión
+        <button className={`${contex.botonstate ? 'flex' : 'hidden'} bg-white px-5 py-2 text-center font-bold rounded`} 
+        onClick={inicioDeSesion}>
+          Iniciar sesión
         </button>
       </div>
-        <div >
-        <div >
-          <p>Nombre</p>
-          <p>Apellidos</p>
+        <div className={`${contex.iconoState ? 'flex' : 'hidden' } w-[20%]`}>
+        <div className="w-full flex flex-col items-center mt-5 ">
+          <p className="text-white w-full">{contex.usuariogeneral.nombres} </p>
+          <p  className="text-white w-full ">{contex.usuariogeneral.apellidos}</p>
         </div>
-        <img className= {""} src={""} alt="usuarioFoto" />
+        <img className="w-[50%] h-[80%] m-2" src={icono} alt="usuarioFoto" />
       </div> 
     </header>
   );

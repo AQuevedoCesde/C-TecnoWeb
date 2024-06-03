@@ -1,7 +1,6 @@
 import whatsapp from "../../../assets/whatsapp.png";
 import chatgpt from "../../../assets/chat-gpt.png";
 import google from "../../../assets/google.png";
-
 import { connDatabase } from "../../../database/Firebase";
 import { useContext } from "react";
 import { InformacionCuenta } from "../../Context/Contex";
@@ -32,8 +31,8 @@ function FormularioLogin() {
         let UsuarioEncontrado = dbUsuario.find((usuario)=> usuario.email === email && usuario.contrasena == contrasena )
           if(UsuarioEncontrado){
            contex.setusuariogeneral(UsuarioEncontrado)
-           contex.setBoton("btnoculto")
-           contex.setinfUsuario("informacionUsuario")
+           contex.botonoff()
+           contex.iconoOn()
            Swal.fire({
             icon: "success",
             title: "Bienvenido a tu cuenta",
