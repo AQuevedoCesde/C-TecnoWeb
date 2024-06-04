@@ -24,7 +24,7 @@ function Accesorios() {
 
   return (
    <Layaout>
-    <div className="grid grid-cols-4 gap-8">
+    <div className="grid grid-cols-4 gap-5">
         {accesorios.map((accesorio)=>(<CardItem nombre = {accesorio.nombre} imagen = {accesorio.imagen} />))} 
     </div>
    </Layaout>
