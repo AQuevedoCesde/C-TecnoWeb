@@ -2,6 +2,8 @@ import CardServicios from "./CardServicios.jsx"
 import computador from '../../../assets/computador.jpg'
 import sala from '../../../assets/salaComputo1.jpg'
 import accesorio from '../../../assets/Accesorio.jpg'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -14,9 +16,9 @@ function SolicitarServicio() {
       </div>
       <div className=" w-[65%]" >
         <div className=" flex justify-evenly w-full mt-10 ml-[-100px] gap-5" >
-            <CardServicios img = {computador} titulo = {"Computadores"} parrafo={"Solicita la reserva de tu computador"}/>
-            <CardServicios img = {sala} titulo = {"Salas"}/>
-            <CardServicios img = {accesorio} titulo = {"Accesorios"}/>
+            <Link to="/computadores"><CardServicios img = {computador} titulo = {"Computadores"} parrafo={"Solicita la reserva de tu computador"}/></Link>
+            <Link to="/salas"><CardServicios img={sala} titulo={"Salas"} /></Link>
+            <Link to="/accesorios" ><CardServicios img = {accesorio} titulo = {"Accesorios"}/></Link>
         </div> 
     </div>   
     </section>  
