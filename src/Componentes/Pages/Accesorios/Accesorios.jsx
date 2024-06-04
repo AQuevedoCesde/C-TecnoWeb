@@ -1,11 +1,32 @@
+import CardItem from "../../CardItem/CardItem";
 import Layaout from "../../Layout/Layaout";
+import{useEffect, useState} from 'react'
+import { collection } from "firebase/firestore";
+import { connDatabase } from "../../../database/Firebase";
+import { getDocs } from "firebase/firestore";
 
- 
+
 function Accesorios() {
+    const [accesorios, setAccesorios] = useState([])
+
+    async function getAccesorios() {
+      let collectionAccesorios = collection(connDatabase, "accesorios");
+      let resultado = await getDocs(collectionAccesorios);
+      console.log(resultado.docs.map((doc) => ({ ...doc.data() })))
+      setAccesorios(resultado.docs.map((doc) => ({ ...doc.data() })));
+ 
+    }
+      
+    useEffect(() => {
+      getAccesorios();
+      
+    }, []);
 
   return (
    <Layaout>
-    home
+    <div className="grid grid-cols-4 gap-8">
+        {accesorios.map((accesorio)=>(<CardItem nombre = {accesorio.nombre} imagen = {accesorio.imagen} />))} 
+    </div>
    </Layaout>
   )
 }
