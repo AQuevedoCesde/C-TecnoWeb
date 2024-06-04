@@ -3,11 +3,13 @@ import { ProveedorInformacion } from "../Context/Contex";
 import Login from "../Auth/Login/Login";
 import "./App.css";
 import Home from "../Pages/Home/Home";
+import Accesorios from "../Pages/Accesorios/Accesorios";
 
 const Redirecciones = () => {
   let rutas = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/login", element: <Login/> },
+    {path: "/accesorios", element: <Accesorios/>}
   ]);
   return rutas;
 };
