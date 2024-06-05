@@ -14,6 +14,12 @@ export const ProveedorInformacion = ({children}) =>{
     const [iconoState, seticonoState] = useState(false)
     const iconoOn = () => seticonoState(true)
 
+    //Modal 
+    const [showModal, setShowModal] = useState(false);
+
+    //Computadores
+    const [Computadores, setComputadores] = useState([])
+
 return(
     <InformacionCuenta.Provider value={{
         usuariogeneral,
@@ -21,7 +27,11 @@ return(
         setusuariogeneral,
         botonoff,
         iconoOn,
-        iconoState
+        iconoState,
+        showModal,
+        setShowModal,
+        Computadores,
+        setComputadores
     }}>
         {children}
     </InformacionCuenta.Provider>

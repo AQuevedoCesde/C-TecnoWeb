@@ -13,7 +13,7 @@ function Header() {
   }
 
   return (
-    <header className="w-[100%] h-[13vh] flex justify-between bg-gradient-to-r from-sky-500 to-blue-900">
+    <header className="w-[100%] h-[13vh] flex justify-between bg-gradient-to-r from-blue-900 to-sky-500">
       <img className="w-15 h-[85%] m-1" src={logo} alt="logo" />
       <section className="text-white w-[70%] flex justify-around items-center font-bold">
         <a href="#">Home</a>
