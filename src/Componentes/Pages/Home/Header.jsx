@@ -3,6 +3,8 @@ import icono from "../../../assets/user.png";
 import { useContext } from "react";
 import { InformacionCuenta } from "../../Context/Contex";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   const contex = useContext(InformacionCuenta);
@@ -16,8 +18,8 @@ function Header() {
     <header className="w-[100%] h-[13vh] flex justify-between bg-gradient-to-r from-blue-900 to-sky-500">
       <img className="w-15 h-[85%] m-1" src={logo} alt="logo" />
       <section className="text-white w-[70%] flex justify-around items-center font-bold">
-        <a href="#">Home</a>
-        <a href="#">Estadisticas</a>
+        <Link to="/">Home</Link>
+        <a href="https://basedatospy-3jxuhmy5hwcbiczjtxpejs.streamlit.app/" target="_blank">Estadisticas</a>
         <a href="#">Configurar perfil</a>
       </section>
       <div className="flex items-center w-[20%] justify-center">

@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 700ms ease-in;
+    margin: 9px;
+    cursor: pointer;
+    position: relative; /* Añadido para posicionar h1 relativo al panel */
+  }
+  
+  .panel img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 130px;
+    border-radius: 80px;
+    transition: all 700ms ease-in;
+  }
+  
+  .panel h1 {
+    font-size: 35px;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel.active img {
+    height: 70vh; /* Ajustar la altura de la imagen activa */
+    width: auto; /* Ajustar el ancho de la imagen activa */
+  }
+  

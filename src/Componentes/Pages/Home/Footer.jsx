@@ -20,20 +20,23 @@ function Footer() {
         </div>
         <div>
           <h6>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-            Et neque eum consequuntur officiis iure eveniet laudantium
-            <br />
-            alias ipsum maiores earum nostrum sequi quisquam enim iste ut <br />
-            eligendi dicta, impedit beatae.
+          Misión :  <br />
+          "Proveer soluciones tecnológicas eficientes y <br />
+           accesibles para la reserva de computadores y <br />
+           salones de cómputo, optimizando el uso de <br /> 
+           recursos y facilitando el acceso a espacios<br />
+            digitales de alta calidad para nuestros usuarios." <br />
           </h6>
         </div>
         <div>
           <h6>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-            Et neque eum consequuntur officiis iure eveniet laudantium
-            <br />
-            alias ipsum maiores earum nostrum sequi quisquam enim iste ut <br />
-            eligendi dicta, impedit beatae.
+          Visión : <br />
+          "Ser la empresa líder en la gestión y reserva  <br />
+          de espacios tecnológicos, reconocida por nuestra <br />
+          innovación, confiabilidad y compromiso con la  <br />
+          excelencia  en el servicio, contribuyendo al <br />
+           desarrollo y éxito de nuestras comunidades  <br />
+           educativas y profesionales."
           </h6>
         </div>
       </div>

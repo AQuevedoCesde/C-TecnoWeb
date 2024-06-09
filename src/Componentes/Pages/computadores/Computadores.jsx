@@ -5,6 +5,7 @@ import Layout from "../../Layout/Layaout.jsx";
 import CardItem from "../../CardItem/CardItem.jsx";
 import ModalPc from "../../Modal/ModalPc.jsx";
 import { InformacionCuenta } from "../../Context/Contex";
+import Navegador from "../../Layout/Navegador.jsx";
 
 function Computadores() {
   const [computadores, setComputadores] = useState([]);
@@ -24,6 +25,7 @@ function Computadores() {
     <>
       <Layout>
         <Fragment>
+        <Navegador/>
           <div className="grid grid-cols-4 gap-5">
             {computadores.map((computador) => (
               <CardItem datos = {computador} nombre={computador.marca} imagen={computador.imagen} />

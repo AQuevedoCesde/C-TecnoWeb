@@ -1,6 +1,6 @@
 import React from "react";
 
-function Estadisticas({imag,titulo,subTitulo,seccion1,informacion1,seccion2,informacion2}) {
+function Estadisticas({imag,titulo,subTitulo,seccion1,informacion1,seccion2,informacion2,estadistica}) {
   return (
     
       <figure className="w-1/4 bg-white p-5 shadow-xl m-10">
@@ -14,7 +14,7 @@ function Estadisticas({imag,titulo,subTitulo,seccion1,informacion1,seccion2,info
           <li className="p-1">
           <span className="font-semibold"> {seccion2}</span> {informacion2}
           </li>
-          <a href="#"> <h6 className="text-[#1465bb] font-bold " > Ir a estadisticas</h6></a> 
+          <a href={estadistica} target="_blank"> <h6 className="text-[#1465bb] font-bold " > Ir a estadisticas</h6></a> 
         </ul>
       </figure>
   );

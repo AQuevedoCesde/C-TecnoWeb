@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { connDatabase } from "../../../database/Firebase.jsx";
 import { collection, getDocs } from "firebase/firestore";
 import CardItem from "../../CardItem/CardItem";
+import Navegador from "../../Layout/Navegador.jsx";
 
 function Salas() {
 
@@ -26,6 +27,7 @@ function Salas() {
 
     <>
       <Layout>
+      <Navegador/>
         <div className="grid grid-cols-4 gap-5">
         {salas.map((sala)=>(<CardItem nombre = {sala.id} imagen = {sala.imagen}/> ))} 
         </div>
