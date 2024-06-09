@@ -24,7 +24,7 @@
     transition: all 700ms ease-in;
     margin: 9px;
     cursor: pointer;
-    position: relative; /* Añadido para posicionar h1 relativo al panel */
+    position: relative;
   }
   
   .panel img {
@@ -51,7 +51,14 @@
   }
   
   .panel.active img {
-    height: 70vh; /* Ajustar la altura de la imagen activa */
-    width: auto; /* Ajustar el ancho de la imagen activa */
+    height: 70vh; 
+    width: auto; 
+  }
+  
+  .reservando {
+    width: 250px;
+    height: 100vh;
+    right: 0;
+    top: 110px;
   }
   

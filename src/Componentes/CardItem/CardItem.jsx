@@ -1,5 +1,4 @@
 
-import { PlusIcon} from "@heroicons/react/16/solid"
 import { useContext } from "react"
 import { InformacionCuenta } from "../Context/Contex"
 
@@ -9,6 +8,7 @@ function CardItem({datos, nombre,imagen}) {
   function obtenerInformacion (datos) {
     context.setShowModal(true)
     context.setComputadores(datos)
+  
   }
 
   return (

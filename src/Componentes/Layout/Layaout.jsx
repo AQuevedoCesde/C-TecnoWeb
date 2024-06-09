@@ -8,7 +8,7 @@ function Layaout({children}) {
   return (
     <>
       <Header/>
-      <div className='flex flex-col items-center mt-10'>
+      <div className='flex flex-col items-center mt-28'>
          {children}
      </div>
     </>

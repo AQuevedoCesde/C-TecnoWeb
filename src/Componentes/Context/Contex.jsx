@@ -20,6 +20,14 @@ export const ProveedorInformacion = ({children}) =>{
     //Computadores
     const [Computadores, setComputadores] = useState([])
 
+    //Reservando
+    const [isReservingOpen, setisReservingOpen] = useState(false)
+    const [stockReserva,setStockReserva] = useState([])
+    const openReserving = () => setisReservingOpen(true)
+    const closeReserving = () => setisReservingOpen(false)
+
+    console.log("stockreserva" + stockReserva)
+
 return(
     <InformacionCuenta.Provider value={{
         usuariogeneral,
@@ -31,7 +39,12 @@ return(
         showModal,
         setShowModal,
         Computadores,
-        setComputadores
+        setComputadores,
+        openReserving,
+        closeReserving,
+        isReservingOpen,
+        stockReserva,
+        setStockReserva
     }}>
         {children}
     </InformacionCuenta.Provider>

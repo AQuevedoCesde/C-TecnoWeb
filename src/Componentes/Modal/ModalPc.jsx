@@ -1,12 +1,22 @@
 
 import { XCircleIcon } from "@heroicons/react/16/solid";
+import { useContext } from "react";
+import { InformacionCuenta } from "../Context/Contex";
 
-function ModalPc({ isVisible, onClose,marca,s_o,procesador,memoria,imagen}) {
+function ModalPc({ pc, isVisible, onClose,marca,s_o,procesador,memoria,imagen}) {
   if (!isVisible) return null;
+  const contex = useContext(InformacionCuenta)
+
+  function actionModal (marca){
+    contex.openReserving()
+    contex.setStockReserva(marca)
+
+    
+  }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
-      <div className="bg-white w-3/5 h-5/6 rounded-xl">
+      <div className="bg-white w-3/5 h-4/6 rounded-xl">
         <div className="h-[13%] flex  ">
           <h1  className="w-[99%] text-center text-3xl font-extrabold self-center">{marca}</h1>
           <button onClick={() => onClose()} ><XCircleIcon className="w-8 text-red-600 text-xl m-2 self-"/></button>
@@ -24,7 +34,9 @@ function ModalPc({ isVisible, onClose,marca,s_o,procesador,memoria,imagen}) {
           </div>   
             <div className="w-[30%] h-[100%] text-center font-bold text-xl">Aplicativos</div>
         </div>
-        <div className="h-[15%] flex justify-center items-start"> <button className="bg-[#003785] text-white p-3 rounded-lg">Agregar</button> </div>
+        <div 
+         className="h-[15%] flex justify-center items-start"> <button className="bg-[#003785] text-white p-3 rounded-lg"
+         onClick={() => actionModal(marca)}>Agregar</button> </div>
       </div>
     </div>
   );
