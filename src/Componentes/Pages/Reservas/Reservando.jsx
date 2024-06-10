@@ -1,9 +1,11 @@
 import { XCircleIcon } from "@heroicons/react/16/solid";
 import React, { useContext } from "react";
 import { InformacionCuenta } from "../../Context/Contex";
+import { useNavigate } from "react-router-dom";
 import CardReserving from "../../CardItem/CardReserving";
 
 function Reservando() {
+  let redireccion = useNavigate();
   const contex = useContext(InformacionCuenta);
 
   const eliminarReservados = (id) => {
@@ -13,6 +15,11 @@ function Reservando() {
     contex.setStockReserva(filtrarReservados);
     console.log(id);
   };
+
+  function finalizarReserva() {
+    contex.setReservaboton(false)
+    redireccion("/reserva");
+  }
 
   return (
     <aside
@@ -29,8 +36,12 @@ function Reservando() {
             <XCircleIcon className="h-6 w-6 text-[#003785]"></XCircleIcon>
           </div>
         </div>
-        <div className="bg-[#003785] text-white p-2 font-semibold rounded-lg  fixed bottom-0 right-10 m-3">
-          <button>Finalizar reserva</button>
+        <div
+          className={`${
+            contex.reservaBoton ? "flex" : "hidden"
+          } bg-[#003785] text-white p-2 font-semibold rounded-lg fixed bottom-0 right-10 m-3`}
+        >
+          <button onClick={() => finalizarReserva()}>Finalizar reserva</button>
         </div>
       </div>
       <div>

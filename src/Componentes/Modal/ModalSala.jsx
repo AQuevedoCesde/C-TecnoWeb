@@ -25,6 +25,7 @@ function ModalSala({ sala, isVisible, onClose }) {
       context.openReserving();
       context.setStockReserva((prevReserva) => [...prevReserva, sala]);
       context.setShowModal(false)
+      context.setReservaboton(true)
   }
   }
 

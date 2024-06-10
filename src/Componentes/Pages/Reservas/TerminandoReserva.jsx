@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Layaout from "../../Layout/Layaout";
 import { Calendar, dayjsLocalizer } from "react-big-calendar";
 import dayjs from "dayjs";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { InformacionCuenta } from "../../Context/Contex";
+import Navegador from "../../Layout/Navegador";
 
 function TerminandoReserva() {
   const localizer = dayjsLocalizer(dayjs);
@@ -16,7 +18,9 @@ function TerminandoReserva() {
   return (
     <>
       <Layaout>
-        <div className="w- h-96 flex justify-center">
+        <Navegador/>
+        <h1 className="text-[#003785] font-semibold mb-10 text-xl">Escoge el dia y la hora en el que deseas reservar</h1>
+        <div className="h-96 flex justify-center">
           <Calendar
             localizer={localizer}
             events={events}
@@ -24,6 +28,7 @@ function TerminandoReserva() {
             max={dayjs("2024-6-11T20:00").toDate()}
           />
         </div>
+        <button className="bg-[#003785] p-3 text-white rounded-lg m-5">Guardar</button>
       </Layaout>
     </>
   );

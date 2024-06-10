@@ -12,7 +12,9 @@ export const ProveedorInformacion = ({ children }) => {
   const [salas, setSalas] = useState([])
   const [isReservingOpen, setisReservingOpen] = useState(false);
   const [stockReserva, setStockReserva] = useState([]);
+  const [reservaBoton, setReservaboton] = useState(true)
 
+console.log(reservaBoton)
   
 
   const botonoff = () => setbotonstate(false);
@@ -44,6 +46,8 @@ export const ProveedorInformacion = ({ children }) => {
         isReservingOpen,
         stockReserva,
         setStockReserva,
+        reservaBoton,
+        setReservaboton
       }}
     >
       {children}

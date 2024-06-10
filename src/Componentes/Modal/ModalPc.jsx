@@ -25,6 +25,7 @@ function ModalPc({ pc, isVisible, onClose }) {
       context.openReserving();
       context.setStockReserva((prevReserva) => [...prevReserva, pc]);
       context.setShowModal(false)
+      context.setReservaboton(true)
   }
   }
 

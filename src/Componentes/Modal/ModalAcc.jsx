@@ -27,6 +27,7 @@ function ModalAcc({ acc, isVisible, onClose }) {
       context.openReserving();
       context.setStockReserva((prevReserva) => [...prevReserva, acc]);
       context.setShowModal(false)
+      context.setReservaboton(true)
   }
 
  
