@@ -4,12 +4,12 @@ import { InformacionCuenta } from "../Context/Contex";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-function ModalPc({ pc, isVisible, onClose }) {
+function ModalSala({ sala, isVisible, onClose }) {
   const context = useContext(InformacionCuenta);
   let redireccion = useNavigate();
   if (!isVisible) return null;
 
-  function actionModal(event,pc) {
+  function actionModal(event,sala) {
     if (Object.keys(context.usuariogeneral).length === 0) {
       Swal.fire({
         position: "center",
@@ -23,11 +23,10 @@ function ModalPc({ pc, isVisible, onClose }) {
     }else{
       event.stopPropagation()
       context.openReserving();
-      context.setStockReserva((prevReserva) => [...prevReserva, pc]);
+      context.setStockReserva((prevReserva) => [...prevReserva, sala]);
       context.setShowModal(false)
   }
   }
-
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
@@ -59,7 +58,7 @@ function ModalPc({ pc, isVisible, onClose }) {
           </div>
         </div>
         <div className="h-[15%] flex justify-center items-start">
-          <button className="bg-[#003785] text-white p-3 rounded-lg" onClick={(event) => actionModal(event,pc)}>
+          <button className="bg-[#003785] text-white p-3 rounded-lg" onClick={(event) => actionModal(event,sala)}>
             Agregar
           </button>
         </div>
@@ -68,4 +67,4 @@ function ModalPc({ pc, isVisible, onClose }) {
   );
 }
 
-export default ModalPc;
+export default ModalSala;

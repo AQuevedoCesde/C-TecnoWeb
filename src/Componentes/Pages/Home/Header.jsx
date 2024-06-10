@@ -21,6 +21,7 @@ function Header() {
         <Link to="/">Home</Link>
         <a href="https://basedatospy-3jxuhmy5hwcbiczjtxpejs.streamlit.app/" target="_blank">Estadisticas</a>
         <a href="#">Configurar perfil</a>
+        <a href="#">Mis reservas</a>
       </section>
       <div className="flex items-center w-[20%] justify-center">
         <button

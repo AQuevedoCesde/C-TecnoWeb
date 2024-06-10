@@ -29,18 +29,14 @@ function Computadores() {
           <Navegador />
           <div className="grid grid-cols-4 gap-5">
             {computadores.map((computador) => (
-              <CardItem datos={computador} nombre={computador.marca} imagen={computador.imagen} />
+              <CardItem datos={computador} />
             ))}
           </div>
           <Reservando />
           <ModalPc
             isVisible={context.showModal}
             onClose={() => context.setShowModal(false)}
-            marca={context.Computadores.marca}
-            s_o={context.Computadores.sistema_operativo}
-            procesador={context.Computadores.procesador}
-            memoria={context.Computadores.memoria}
-            imagen={context.Computadores.imagen}
+            pc = {context.Computadores}
           ></ModalPc>
         </Fragment>
       </Layout>

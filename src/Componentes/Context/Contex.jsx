@@ -1,35 +1,30 @@
-import {createContext,useState } from "react";
+import { createContext, useState } from "react";
 
-export const InformacionCuenta = createContext()
+export const InformacionCuenta = createContext();
 
-export const ProveedorInformacion = ({children}) =>{
-    const [usuariogeneral, setusuariogeneral] = useState({})
+export const ProveedorInformacion = ({ children }) => {
+  const [usuariogeneral, setusuariogeneral] = useState({});
+  const [botonstate, setbotonstate] = useState(true);
+  const [iconoState, seticonoState] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [Computadores, setComputadores] = useState([]);
+  const [accesorios, setAccesorios] = useState([]);
+  const [salas, setSalas] = useState([])
+  const [isReservingOpen, setisReservingOpen] = useState(false);
+  const [stockReserva, setStockReserva] = useState([]);
 
-    //Boton Iniciar sesion
-    const [botonstate, setbotonstate] = useState(true)
-    const botonoff = () => setbotonstate(false)
+  
 
-    //Icono usuario
+  const botonoff = () => setbotonstate(false);
+  const iconoOn = () => seticonoState(true);
+  const openReserving = () => setisReservingOpen(true);
+  const closeReserving = () => setisReservingOpen(false);
 
-    const [iconoState, seticonoState] = useState(false)
-    const iconoOn = () => seticonoState(true)
+  console.log(accesorios)
 
-    //Modal 
-    const [showModal, setShowModal] = useState(false);
-
-    //Computadores
-    const [Computadores, setComputadores] = useState([])
-
-    //Reservando
-    const [isReservingOpen, setisReservingOpen] = useState(false)
-    const [stockReserva,setStockReserva] = useState([])
-    const openReserving = () => setisReservingOpen(true)
-    const closeReserving = () => setisReservingOpen(false)
-
-    console.log("stockreserva" + stockReserva)
-
-return(
-    <InformacionCuenta.Provider value={{
+  return (
+    <InformacionCuenta.Provider
+      value={{
         usuariogeneral,
         botonstate,
         setusuariogeneral,
@@ -40,14 +35,18 @@ return(
         setShowModal,
         Computadores,
         setComputadores,
+        accesorios,
+        salas,
+        setSalas,
         openReserving,
+        setAccesorios,
         closeReserving,
         isReservingOpen,
         stockReserva,
-        setStockReserva
-    }}>
-        {children}
+        setStockReserva,
+      }}
+    >
+      {children}
     </InformacionCuenta.Provider>
-)
-
-}
+  );
+};

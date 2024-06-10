@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home";
 import Accesorios from "../Pages/Accesorios/Accesorios";
 import Salas from "../Pages/salas/Salas";
 import Computadores from "../Pages/computadores/Computadores";
+import Reservando from "../Pages/Reservas/Reservando";
 
 const Redirecciones = () => {
   let rutas = useRoutes([
@@ -27,6 +28,7 @@ function App() {
     <ProveedorInformacion>
       <BrowserRouter>
         <Redirecciones />
+        <Reservando/>
       </BrowserRouter>
     </ProveedorInformacion>
   );
