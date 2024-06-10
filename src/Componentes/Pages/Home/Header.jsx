@@ -40,7 +40,7 @@ function Header() {
             {contex.usuariogeneral.apellidos}
           </p>
         </div>
-        <img className="w-[50%] h-[80%] m-2" src={icono} alt="usuarioFoto" />
+        <img className="w-[80%] h-[80%] object-cover rounded-lg m-2" src={contex.usuariogeneral.imagen} alt="usuarioFoto" />
       </div>
     </header>
   );
