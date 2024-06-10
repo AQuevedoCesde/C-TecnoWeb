@@ -5,6 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import CardItem from "../../CardItem/CardItem";
 import Navegador from "../../Layout/Navegador.jsx";
 import { InformacionCuenta } from "../../Context/Contex.jsx";
+import ModalSala from "../../Modal/ModalSala.jsx";
 
 function Salas() {
   const [salas, setSalas] = useState([]);
@@ -27,9 +28,15 @@ function Salas() {
           <Navegador />
           <div className="grid grid-cols-4 gap-5">
             {salas.map((sala) => (
-              <CardItem nombre={sala.id} imagen={sala.imagen} />
+              <CardItem datos={sala} />
             ))}
           </div>
+
+          <ModalSala
+            isVisible={context.showModal}
+            onClose={() => context.setShowModal(false)}
+            sala={context.salas}
+          ></ModalSala>
         </Fragment>
       </Layout>
     </>

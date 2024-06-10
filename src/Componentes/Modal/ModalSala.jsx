@@ -32,7 +32,7 @@ function ModalSala({ sala, isVisible, onClose }) {
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div className="bg-white w-2/6 h-4/6 rounded-xl">
         <div className="h-[13%] flex">
-          <h1 className="w-[99%] text-center text-3xl font-extrabold self-center">{pc.marca}</h1>
+          <h1 className="w-[99%] text-center text-3xl font-extrabold self-center">{ sala.id}</h1>
           <button onClick={onClose}>
             <XCircleIcon className="w-8 text-red-600 text-xl m-2 self-" />
           </button> 
@@ -40,18 +40,15 @@ function ModalSala({ sala, isVisible, onClose }) {
         <div className="flex justify-center h-[70%] mt-3">
           <div className="w-[60%] h-[100%] flex flex-col">
             <div className="w-[100%] h-[70%] flex justify-center">
-              <img src={pc.imagen} alt="imagen" />
+              <img src={sala.imagen} alt="imagen" />
             </div>
             <div className="w-[100%] h-[100%] flex justify-center items-start ">
               <ul>
                 <li className="font-extrabold">
-                  Sistema Operativo: <span className="text-sm font-medium">{pc.sistema_operativo}</span>
+                  Sede <span className="text-sm font-medium">{sala.sede}</span>
                 </li>
                 <li className="font-extrabold">
-                  Procesador: <span className="text-sm font-medium">{pc.procesador}</span>
-                </li>
-                <li className="font-extrabold">
-                  Memoria: <span className="text-sm font-medium">{pc.memoria} GB</span>
+                  Direccion: <span className="text-sm font-medium">{sala.direccion}</span>
                 </li>
               </ul>
             </div>

@@ -9,7 +9,7 @@ function CardItem({datos}) {
     context.setShowModal(true)
     context.setComputadores(datos)
     context.setAccesorios(datos)
-  
+    context.setSalas(datos)
   }
 
   return (
