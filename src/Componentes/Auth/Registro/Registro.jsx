@@ -8,9 +8,9 @@ import Swal from "sweetalert2";
 import logo from "../../../assets/logodefinitivo.png"
 const Registro = () => {
   const [usuarios, setUsuarios] = useState([]);
-  const [apellido, setUser] = useState("");
+  const [apellidos, setUser] = useState("");
   const [contrasena, setPassword] = useState("");
-  const [nombre, setName] = useState("");
+  const [nombres, setName] = useState("");
   const [email, setEmail] = useState("");
   const [programa, setPrograma] = useState("");
   const [img, setImg] = useState("");
@@ -43,14 +43,14 @@ const Registro = () => {
     return urlImg;
   }
   async function crearUsuario() {
-    let imgServer = await subirImg(img);
+    let imagen = await subirImg(img);
     let nuevoUsuario = {
-      nombre,
-      apellido,
+      nombres,
+      apellidos,
       email,
       contrasena,
       programa,
-      imgServer,
+      imagen,
     };
     let enviarUsuario = collection(connDatabase, "usuarios");
     await addDoc(enviarUsuario, nuevoUsuario);
@@ -58,7 +58,7 @@ const Registro = () => {
 
   const registrarUsuario = () => {
     if (!buscarUsuario()) {
-      if (nombre === "" || apellido == "" || email === "" || contraseña === "" || programa === "" || img === "") {
+      if (nombres === "" || apellidos == "" || email === "" || contrasena === "" || programa === "" || img === "") {
         Swal.fire({
           position: "top-center",
           icon: "error",
