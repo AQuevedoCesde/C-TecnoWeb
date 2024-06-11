@@ -9,7 +9,7 @@ import logo from "../../../assets/logodefinitivo.png"
 const Registro = () => {
   const [usuarios, setUsuarios] = useState([]);
   const [apellido, setUser] = useState("");
-  const [contraseña, setPassword] = useState("");
+  const [contrasena, setPassword] = useState("");
   const [nombre, setName] = useState("");
   const [email, setEmail] = useState("");
   const [programa, setPrograma] = useState("");
@@ -48,7 +48,7 @@ const Registro = () => {
       nombre,
       apellido,
       email,
-      contraseña,
+      contrasena,
       programa,
       imgServer,
     };

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../../Layout/Layaout"; 
-import { Calendar, dayjsLocalizer } from "react-big-calendar";
-import dayjs from "dayjs";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+// import { Calendar, dayjsLocalizer } from "react-big-calendar";
+// import dayjs from "dayjs";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
 import Navegador from "../../Layout/Navegador";
 
 function TerminandoReserva() {
@@ -10,39 +10,39 @@ function TerminandoReserva() {
   const [horaSeleccionada, setHoraSeleccionada] = useState("");
   const [tiempoCompleto, setTimepoCompleto] = useState("");
 
-  dayjs.locale("es");
-  const localizer = dayjsLocalizer(dayjs);
+  // dayjs.locale("es");
+  // const localizer = dayjsLocalizer(dayjs);
 
-  const handleDateChange = (event) => {
-    const selectedDate = event.target.value;
-    setFechaSeleccionada(selectedDate); 
-  };
+  // const handleDateChange = (event) => {
+  //   const selectedDate = event.target.value;
+  //   setFechaSeleccionada(selectedDate); 
+  // };
 
-  const handleTimeChange = (event) => {
-    setHoraSeleccionada(event.target.value);
-  };
+  // const handleTimeChange = (event) => {
+  //   setHoraSeleccionada(event.target.value);
+  // };
 
-  const handleSave = () => {
-    const fechaCompleta = `${fechaSeleccionada}T${horaSeleccionada}`;
+  // const handleSave = () => {
+  //   const fechaCompleta = `${fechaSeleccionada}T${horaSeleccionada}`;
 
-    if (dayjs(fechaCompleta, "YYYY-MM-DDTHH:mm", true).isValid()) {
-      setTimepoCompleto(dayjs(fechaCompleta).format());
-    } else {
-      console.error("Invalid date and time format. Please check your selections.");
-    }
-  };
+  //   if (dayjs(fechaCompleta, "YYYY-MM-DDTHH:mm", true).isValid()) {
+  //     setTimepoCompleto(dayjs(fechaCompleta).format());
+  //   } else {
+  //     console.error("Invalid date and time format. Please check your selections.");
+  //   }
+  // };
 
-  const events = [
-    {
-      start: dayjs(tiempoCompleto).toDate(),
-      end: dayjs(tiempoCompleto).toDate(),
-      title: "Andres",
-    },
-  ];
+  // const events = [
+  //   {
+  //     start: dayjs(tiempoCompleto).toDate(),
+  //     end: dayjs(tiempoCompleto).toDate(),
+  //     title: "Andres",
+  //   },
+  // ];
 
   return (
     <>
-      <Layout>
+      {/* <Layout>
         <Navegador />
         <h1 className="text-[#003785] font-semibold mb-10 text-xl">
           Escoge el dia y la hora en el que deseas reservar
@@ -58,7 +58,7 @@ function TerminandoReserva() {
           <button onClick={handleSave}>Reservar</button>
         </div>
         <button className="bg-[#003785] p-3 text-white rounded-lg m-5">Guardar</button>
-      </Layout>
+      </Layout> */}
     </>
   );
 }
