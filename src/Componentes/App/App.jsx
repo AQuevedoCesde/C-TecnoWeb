@@ -6,6 +6,8 @@ import Home from "../Pages/Home/Home";
 import Accesorios from "../Pages/Accesorios/Accesorios";
 import Salas from "../Pages/salas/Salas";
 import Computadores from "../Pages/computadores/Computadores";
+import EditarUsuario from "../Auth/EditarUsuario/EditarUsuario";
+import Registro from "../Auth/Registro/Registro";
 
 const Redirecciones = () => {
   let rutas = useRoutes([
@@ -13,7 +15,9 @@ const Redirecciones = () => {
     { path: "/login", element: <Login/> },
     {path: "/accesorios", element: <Accesorios/>},
     { path: "/salas", element: <Salas/> },
-    { path: "/computadores", element: <Computadores/> }
+    { path: "/editar_usuario", element: <EditarUsuario/> },
+    { path: "/computadores", element: <Computadores/> },
+    { path: "/registro", element: <Registro/>}
 
 
   ]);
