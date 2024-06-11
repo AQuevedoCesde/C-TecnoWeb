@@ -14,15 +14,10 @@ export const ProveedorInformacion = ({ children }) => {
   const [stockReserva, setStockReserva] = useState([]);
   const [reservaBoton, setReservaboton] = useState(true)
 
-console.log(reservaBoton)
-  
-
   const botonoff = () => setbotonstate(false);
   const iconoOn = () => seticonoState(true);
   const openReserving = () => setisReservingOpen(true);
   const closeReserving = () => setisReservingOpen(false);
-
-  console.log(accesorios)
 
   return (
     <InformacionCuenta.Provider

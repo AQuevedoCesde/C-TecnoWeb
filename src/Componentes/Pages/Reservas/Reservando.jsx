@@ -39,9 +39,9 @@ function Reservando() {
         <div
           className={`${
             contex.reservaBoton ? "flex" : "hidden"
-          } bg-[#003785] text-white p-2 font-semibold rounded-lg fixed bottom-0 right-10 m-3`}
+          } bg-[#003785] text-white p-2 font-semibold rounded-lg fixed bottom-0 right-8 m-3`}
         >
-          <button onClick={() => finalizarReserva()}>Finalizar reserva</button>
+          <button onClick={() => finalizarReserva()}>Horarios Disponibles</button>
         </div>
       </div>
       <div>

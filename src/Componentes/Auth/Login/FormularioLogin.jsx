@@ -22,7 +22,6 @@ function FormularioLogin() {
         console.log()
         setDbUsuario(resultado.docs.map((doc) => ({ ...doc.data() })));
       }
-
       useEffect(() => {
         getUsuarios();
       }, []);
