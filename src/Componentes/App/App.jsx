@@ -8,22 +8,18 @@ import Salas from "../Pages/salas/Salas";
 import Computadores from "../Pages/computadores/Computadores";
 import Reservando from "../Pages/Reservas/Reservando";
 import TerminandoReserva from "../Pages/Reservas/TerminandoReserva";
-import EditarUsuario from "../Auth/EditarUsuario/EditarUsuario";
 import Registro from "../Auth/Registro/Registro";
-
-
+import EditarUsuario from "../Auth/EditarUsuario/EditarUsuario";
 const Redirecciones = () => {
   let rutas = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/login", element: <Login/> },
     {path: "/accesorios", element: <Accesorios/>},
     { path: "/salas", element: <Salas/> },
-    { path: "/reserva", element: <TerminandoReserva/> },
-    { path: "/editar_usuario", element: <EditarUsuario/> },
     { path: "/computadores", element: <Computadores/> },
-    { path: "/registro", element: <Registro/>}
-
-
+    { path: "/reserva", element: <TerminandoReserva/> },
+    { path: "/registro", element: <Registro/>},
+    { path: "/EditarUsuario", element: <EditarUsuario/>}
   ]);
   return rutas;
 };
