@@ -10,6 +10,8 @@ import Reservando from "../Pages/Reservas/Reservando";
 import TerminandoReserva from "../Pages/Reservas/TerminandoReserva";
 import Registro from "../Auth/Registro/Registro";
 import EditarUsuario from "../Auth/EditarUsuario/EditarUsuario";
+import MisReservas from "../Pages/Reservas/MisReservas";
+
 const Redirecciones = () => {
   let rutas = useRoutes([
     { path: "/", element: <Home /> },
@@ -20,6 +22,7 @@ const Redirecciones = () => {
     { path: "/reserva", element: <TerminandoReserva/> },
     { path: "/registro", element: <Registro/>},
     { path: "/EditarUsuario", element: <EditarUsuario/>}
+    { path: "/mi_reserva", element: <MisReservas/> }
   ]);
   return rutas;
 };

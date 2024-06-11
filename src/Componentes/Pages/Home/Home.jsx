@@ -7,7 +7,7 @@ import estadistica2 from "../../../assets/estadistica2.jpg";
 import estadistica3 from "../../../assets/estadistica3.jpg";
 import Layaout from "../../Layout/Layaout";
 import Carrusel from "../../Carrusel/Carrusel";
-import Reservando from "../Reservas/Reservando.jsx";
+
 
 
 function Home() {

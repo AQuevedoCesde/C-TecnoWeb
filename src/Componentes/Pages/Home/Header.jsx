@@ -20,8 +20,7 @@ function Header() {
       <section className="text-white w-[70%] flex justify-around items-center font-bold">
         <Link to="/">Home</Link>
         <a href="https://basedatospy-3jxuhmy5hwcbiczjtxpejs.streamlit.app/" target="_blank">Estadisticas</a>
-        <a href="#">Configurar perfil</a>
-        <a href="#">Mis reservas</a>
+        <Link to="/mi_reserva">Mis reservas</Link>
       </section>
       <div className="flex items-center w-[20%] justify-center">
         <button
