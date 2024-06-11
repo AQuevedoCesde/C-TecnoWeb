@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { InformacionCuenta } from "../../Context/Contex";
 import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function FormularioLogin() {
@@ -100,12 +100,10 @@ function FormularioLogin() {
 
       <div className="flex justify-center">
         <h4>
-          <a
-            className=" flex justify-center p-2 text-blue-600 font-sans font-semibold  text-2xl "
-            href="#"
-          >
-            Crear una cuenta
-          </a>
+          <Link to ="/registro" className=" flex justify-center p-2 text-blue-600 font-sans font-semibold  text-2xl "
+            >
+            Crear Usuario
+          </Link>
         </h4>
       </div>
 

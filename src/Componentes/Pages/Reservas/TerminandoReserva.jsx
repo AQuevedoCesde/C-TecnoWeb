@@ -1,3 +1,9 @@
+
+import React, { useState } from "react";
+import Layout from "../../Layout/Layaout"; 
+import { Calendar, dayjsLocalizer } from "react-big-calendar";
+import dayjs from "dayjs";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import React, { useContext, useState } from "react";
 import {connDatabase } from "../../../database/Firebase";
 import { addDoc, collection} from "firebase/firestore";
@@ -21,17 +27,19 @@ function TerminandoReserva() {
 
  
 
-  dayjs.locale("es");
-  const localizer = dayjsLocalizer(dayjs);
+  // dayjs.locale("es");
+  // const localizer = dayjsLocalizer(dayjs);
+
 
   const handleDateChange = (event) => {
     const selectedDate = event.target.value;
     setFechaSeleccionada(selectedDate);
   };
 
-  const handleTimeChange = (event) => {
-    setHoraSeleccionada(event.target.value);
-  };
+  // const handleTimeChange = (event) => {
+  //   setHoraSeleccionada(event.target.value);
+  // };
+
 
   
   const handleSave = () => {
@@ -53,6 +61,7 @@ function TerminandoReserva() {
       title: context.usuariogeneral.nombres,
     },
   ];
+
 
   async function guardarPc () {
     let email = context.usuariogeneral.email
@@ -97,7 +106,7 @@ function TerminandoReserva() {
 
   return (
     <>
-      <Layout>
+      {/* <Layout>
         <Navegador />
         <div className="flex mt-8">
           <div className=" h-80 flex flex-col ml-[-15%] mr-24   justify-around">
@@ -137,6 +146,8 @@ function TerminandoReserva() {
             </div>
           </div>
         </div>
+        <button className="bg-[#003785] p-3 text-white rounded-lg m-5">Guardar</button>
+      </Layout> */}
       </Layout>
     </>
   );
