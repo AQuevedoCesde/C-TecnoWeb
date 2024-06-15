@@ -21,7 +21,7 @@ const Redirecciones = () => {
     { path: "/computadores", element: <Computadores/> },
     { path: "/reserva", element: <TerminandoReserva/> },
     { path: "/registro", element: <Registro/>},
-    { path: "/EditarUsuario", element: <EditarUsuario/>}
+    { path: "/EditarUsuario", element: <EditarUsuario/>},
     { path: "/mi_reserva", element: <MisReservas/> }
   ]);
   return rutas;
